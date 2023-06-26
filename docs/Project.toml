@@ -1,0 +1,4 @@
+[deps]
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+MUSCLE = "7ae5a178-6e0c-4685-bb5d-85668ef53397"
