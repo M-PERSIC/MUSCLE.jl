@@ -9,6 +9,7 @@ module MUSCLE
 
 using MUSCLE_jll
 
+using DocStringExtensions
 using BioSequences
 using FASTX
 using PrecompileTools
