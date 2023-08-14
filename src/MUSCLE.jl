@@ -12,7 +12,6 @@ using MUSCLE_jll
 using BioSequences
 using FASTX
 using PrecompileTools
-using Random
 
 include("ensembles.jl")
 include("align.jl")

@@ -9,7 +9,7 @@ function efa_explode() end
 
 """
 
-$TYPEDSIGNATURES
+$(TYPEDSIGNATURES)
 
 The $(FUNCTIONNAME) command creates one ensemble FASTA (EFA) file from one or more FASTA files. Input filenames or pathnames are 
 specified in the text file fasta_filenames.txt, one per line. 
