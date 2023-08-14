@@ -1,25 +1,19 @@
+using Documenter, DocStringExtensions
 using MUSCLE
-using Documenter
 
-DocMeta.setdocmeta!(MUSCLE, :DocTestSetup, :(using MUSCLE); recursive=true)
-
-makedocs(;
-    modules=[MUSCLE],
-    authors="Michael Persico <michael.a.persico@gmail.com> and contributors",
-    repo="https://github.com/M-PERSIC/MUSCLE.jl/blob/{commit}{path}#{line}",
-    sitename="MUSCLE.jl",
-    format=Documenter.HTML(;
-        prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://M-PERSIC.github.io/MUSCLE.jl",
-        edit_link="main",
-        assets=String[],
-    ),
-    pages=[
+makedocs(
+    sitename = "MUSCLE",
+    format = Documenter.HTML(),
+    modules = [MUSCLE],
+    pages = [
         "Home" => "index.md",
-    ],
+        "Reference" => "reference.md",
+    ]
 )
 
-deploydocs(;
-    repo="github.com/M-PERSIC/MUSCLE.jl",
-    devbranch="main",
-)
+# Documenter can also automatically deploy documentation to gh-pages.
+# See "Hosting Documentation" and deploydocs() in the Documenter manual
+# for more information.
+#=deploydocs(
+    repo = "<repository url>"
+)=#

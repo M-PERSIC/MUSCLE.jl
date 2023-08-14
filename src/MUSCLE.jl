@@ -1,81 +1,25 @@
 """
+This package provides a number of Julia bindings for the [MUSCLE (MUltiple Sequence Comparison by Log-Expectation)](https://drive5.com/muscle5/) 
+multiple sequence alignment program. 
+
+For more information on how MUSCLE works, see https://doi.org/10.1093/nar/gkh340
+For more information on the latest developments with MUSCLE5, see https://doi.org/10.1038/s41467-022-34630-w
 """
 module MUSCLE
 
 using MUSCLE_jll
 
-using FASTX
 using BioSequences
-using BioAlignments
+using FASTX
+using PrecompileTools
+using Random
 
-include("./precompile.jl")
+include("ensembles.jl")
+include("align.jl")
+
 include("./utils.jl")
+include("./workload.jl")
 
-import Base: show
-
-"""
-"""
-Base.@kwdef struct Muscle
-    muscle_version::VersionNumber = v"5.2"
-    diags::Bool = false
-    maxiters::Int = 16
-    quiet::Bool = true
-end
-
-Base.show(io::IO, ::MIME"text/plain", m::Muscle) = print(
-    io,
-    (raw"$(muscle()) " * "-diags $(m.diags) -maxiters $(m.maxiters) -quiet $(m.quiet)"),
-)
-
-"""
-function align(alignment::Muscle,
-    input::String,
-    perturb::Int,
-    perm::Symbol,
-    stratified::Bool,
-    diversified::Bool,
-    replicates::Int,
-    consiters::Int,
-    refineiters::Int
-)
-
-end
-"""
-
-"""
-"""
-function super5() end
-
-"""
-"""
-function efastats() end
-
-"""
-"""
-function efa_explode() end
-
-"""
-"""
-function disperse() end
-
-"""
-"""
-function super5() end
-
-"""
-"""
-function addconfseq() end
-
-"""
-"""
-function letterconf() end
-
-"""
-"""
-function maxcc() end
-
-"""
-"""
-function resample() end
+# export fa2efa
 
 end
