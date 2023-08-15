@@ -8,9 +8,12 @@
         "vscode": {
             "extensions": [
                 "julialang.language-julia",
-                "tamasfe.even-better-toml"
+                "tamasfe.even-better-toml",
+                "ritwickdey.LiveServer",
+                "bierner.markdown-preview-github-styles",
+                "eamodio.gitlens"
             ]
         }
     },
-    "onCreateCommand": "julia --project=docs/Project.toml -e 'using Pkg; Pkg.instantiate(); Pkg.precompile();'"
+    "onCreateCommand": "julia --project=docs/Project.toml -e 'using Pkg; Pkg.instantiate();'"
 }
