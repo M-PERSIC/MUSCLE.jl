@@ -8,11 +8,7 @@
         "vscode": {
             "extensions": [
                 "julialang.language-julia",
-                "tamasfe.even-better-toml",
-                "ritwickdey.LiveServer",
-                "yzhang.markdown-all-in-one",
-                "bierner.markdown-preview-github-styles",
-                "eamodio.gitlens"
+                "tamasfe.even-better-toml"
             ]
         }
     },
